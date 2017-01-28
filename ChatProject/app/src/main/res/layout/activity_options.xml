@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/profilePictureImageView"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Profile picture URL"
+            android:ems="10"
+            android:id="@+id/changeProfilePictureEditText"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Check URL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkProfilePictureButton"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Change Picture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/changeProfilePictureButton"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Take picture with a camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cameraProfilePictureButton"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="From gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/galleryProfilePictureButton"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:hint="Friend Name"
+            android:inputType="textPersonName"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:ems="10"
+            android:id="@+id/addFriendEditText"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="addFriendPreviewTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addFriendPreviewTextView"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Add Friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addFriendButton"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:hint="Remove Name"
+            android:ems="10"
+            android:id="@+id/removeFriendEditText"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="removeFriendPreviewTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/removeFriendPreviewTextView"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Remove Friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/removeFriendButton"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</ScrollView>

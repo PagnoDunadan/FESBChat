@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/profileImageView"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Username"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileTextView"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="30sp" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/friendStatus"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
+        </LinearLayout>
+
+        <!--
+        <TextView
+            android:text="Username"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/profileTextView"
+            android:layout_weight="4"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:paddingLeft="16dp"
+            android:textSize="30sp" />
+            -->
+    </LinearLayout>
+
+    <ListView
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_above="@+id/linearLayout2"
+        android:id="@+id/listView"
+        android:layout_gravity="start|center_vertical" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout2"
+        android:layout_height="85dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <EditText
+            android:hint=""
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/messageEditText"
+            android:layout_weight="9" />
+
+        <Button
+            android:background="@drawable/send_message"
+            android:layout_width="16dp"
+            android:layout_height="50dp"
+            android:id="@+id/sendMessageButton"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</RelativeLayout>
