@@ -8,7 +8,7 @@ var fs = require("fs")
 var path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
-var API_URL = "http://192.168.0.19:3000/";
+var API_URL = "http://192.168.1.221:3000/";
 
 var users = {};
 users['admin'] = {password: 'password', thumbnail: 'https://www.heroesofnewerth.com/images/heroes/120/icon_128.jpg', friends: '||admina||', groups: '||', lastOnline: 0};
@@ -206,6 +206,9 @@ app.post('/addFriendList', function (req, res) {
                 if( (users[key].friends).indexOf("||"+req.body.user+"||") != -1 ) {
                     
                     friendsStatus = true;
+                }
+                else {
+                    friendsStatus = false;
                 }
                 
                 preview = preview + '{' 
