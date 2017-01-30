@@ -87,6 +87,13 @@ public class FriendsChatActivity extends Activity {
                                 .placeholder(R.drawable.chat_icon_blue)
                                 .error(R.drawable.chat_icon_orange)
                                 .load(responseString);
+//                        Ion.with(getApplicationContext())
+//                                .load(responseString)
+//                                .noCache()
+//                                .withBitmap()
+//                                .placeholder(R.drawable.chat_icon_blue)
+//                                .error(R.drawable.chat_icon_orange)
+//                                .intoImageView(profileImageView);
                     }
                 }
             });

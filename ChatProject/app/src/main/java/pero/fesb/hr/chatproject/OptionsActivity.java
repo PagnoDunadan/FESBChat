@@ -87,6 +87,13 @@ public class OptionsActivity extends Activity {
                             .placeholder(R.drawable.chat_icon_blue)
                             .error(R.drawable.chat_icon_orange)
                             .load(responseString);
+//                    Ion.with(getApplicationContext())
+//                            .load(responseString)
+//                            .noCache()
+//                            .withBitmap()
+//                            .placeholder(R.drawable.chat_icon_blue)
+//                            .error(R.drawable.chat_icon_orange)
+//                            .intoImageView(profilePictureImageView);
                     changeProfilePictureEditText.setText(responseString);
                 }
             }
@@ -100,6 +107,13 @@ public class OptionsActivity extends Activity {
                         .placeholder(R.drawable.chat_icon_blue)
                         .error(R.drawable.chat_icon_orange)
                         .load(changeProfilePictureEditText.getText().toString());
+//                Ion.with(getApplicationContext())
+//                        .load(changeProfilePictureEditText.getText().toString())
+//                        .noCache()
+//                        .withBitmap()
+//                        .placeholder(R.drawable.chat_icon_blue)
+//                        .error(R.drawable.chat_icon_orange)
+//                        .intoImageView(profilePictureImageView);
             }
         });
 

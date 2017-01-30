@@ -71,6 +71,13 @@ public class FriendMessagesAdapter extends BaseAdapter {
                         .placeholder(R.drawable.chat_icon_blue)
                         .error(R.drawable.chat_icon_orange)
                         .load(message.getProfileImage());
+//                Ion.with(mContext)
+//                        .load(message.getProfileImage())
+//                        .noCache()
+//                        .withBitmap()
+//                        .placeholder(R.drawable.chat_icon_blue)
+//                        .error(R.drawable.chat_icon_orange)
+//                        .intoImageView(userMessageThumbnail);
             }
 
             Date date = new Date(message.getTime());
@@ -106,6 +113,13 @@ public class FriendMessagesAdapter extends BaseAdapter {
                         .placeholder(R.drawable.chat_icon_blue)
                         .error(R.drawable.chat_icon_orange)
                         .load(message.getProfileImage());
+//                Ion.with(mContext)
+//                        .load(message.getProfileImage())
+//                        .noCache()
+//                        .withBitmap()
+//                        .placeholder(R.drawable.chat_icon_blue)
+//                        .error(R.drawable.chat_icon_orange)
+//                        .intoImageView(friendMessageThumbnail);
             }
 
             Date date = new Date(message.getTime());

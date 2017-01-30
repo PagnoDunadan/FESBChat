@@ -23,7 +23,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static String API_URL = "http://192.168.0.19:3000/";
+    public static String API_URL = "http://192.168.1.65:3000/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +73,13 @@ public class MainActivity extends AppCompatActivity {
                                 .placeholder(R.drawable.chat_icon_blue)
                                 .error(R.drawable.chat_icon_orange)
                                 .load(responseString);
+//                        Ion.with(getApplicationContext())
+//                                .load(responseString)
+//                                .noCache()
+//                                .withBitmap()
+//                                .placeholder(R.drawable.chat_icon_blue)
+//                                .error(R.drawable.chat_icon_orange)
+//                                .intoImageView(profileImageView);
                     }
                 }
             });

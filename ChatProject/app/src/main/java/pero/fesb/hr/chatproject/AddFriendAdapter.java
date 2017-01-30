@@ -56,6 +56,13 @@ public class AddFriendAdapter extends BaseAdapter {
                     .placeholder(R.drawable.chat_icon_blue)
                     .error(R.drawable.chat_icon_orange)
                     .load(addFriend.getThumbnail());
+//            Ion.with(mContext)
+//                    .load(addFriend.getThumbnail())
+//                    .noCache()
+//                    .withBitmap()
+//                    .placeholder(R.drawable.chat_icon_blue)
+//                    .error(R.drawable.chat_icon_orange)
+//                    .intoImageView(addFriendThumbnail);
         }
 
         addFriendName.setText(addFriend.getName());
