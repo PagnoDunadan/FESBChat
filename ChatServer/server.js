@@ -8,7 +8,7 @@ var fs = require("fs")
 var path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
-var API_URL = "http://192.168.1.221:3000/";
+var API_URL = "http://192.168.1.65:3000/";
 
 var users = {};
 users['admin'] = {password: 'password', thumbnail: 'https://www.heroesofnewerth.com/images/heroes/120/icon_128.jpg', friends: '||admina||', groups: '||', lastOnline: 0};
@@ -105,11 +105,13 @@ app.post('/uploadProfilePicture', function (req, res) {
     
     if(req.body.user in users) {
         
-        fs.writeFile(__dirname + '/public/' + req.body.user+'.png', req.body.image, {encoding: 'base64'}, function(err){
+        var randomNumber = (Math.random() * (1000 - 1) + 1);
+        
+        fs.writeFile(__dirname + '/public/'+req.body.user+randomNumber+'.png', req.body.image, {encoding: 'base64'}, function(err){
             //Finished
         });
         
-        users[req.body.user].thumbnail = API_URL+req.body.user+".png";
+        users[req.body.user].thumbnail = API_URL+req.body.user+randomNumber+".png";
         res.end('PictureUpdated');
         console.log(req.body.user + "'s profile picture: " + req.body.image);
         console.log(req.body.user + "'s profile picture uploaded");
